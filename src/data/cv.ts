@@ -12,7 +12,7 @@ export const profile = {
 
 export const stats = [
   { value: "3+", label: "years shipping production software" },
-  { value: "5", label: "companies, from startups to enterprise" },
+  { value: "8", label: "companies & clients, from startups to enterprise" },
   { value: "60k", label: "members grown on one bot campaign" },
   { value: "8+", label: "platforms built or led end-to-end" },
 ];
@@ -24,12 +24,14 @@ export interface Experience {
   location: string;
   summary: string;
   highlights: string[];
+  links?: { label: string; url: string }[];
   stack: string[];
 }
 
 export const experience: Experience[] = [
   {
     company: "AdilasTech",
+    links: [{ label: "ULS", url: "https://uls.ai/" }],
     role: "Frontend Developer",
     period: "Jul 2026 — Present",
     location: "Remote",
@@ -44,22 +46,12 @@ export const experience: Experience[] = [
     stack: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
   },
   {
-    company: "Perago Systems",
-    role: "Full-Stack Developer",
-    period: "2025 — Jul 2026",
-    location: "Addis Ababa",
-    summary:
-      "Enterprise procurement, done properly — from purchase request to audit log.",
-    highlights: [
-      "Develop and maintain an enterprise Procurement Management System covering purchase requests, approvals, vendor management, and inventory workflows.",
-      "Built scalable APIs with Hono and TypeScript, optimized for performance and reliability.",
-      "Implemented role-based access control, approval hierarchies, audit logs, and secure authentication.",
-      "Contributing to an AI-powered procurement platform currently in development.",
-    ],
-    stack: ["Hono", "TypeScript", "Next.js", "React", "PostgreSQL"],
-  },
-  {
     company: "Muyalogy",
+    links: [
+      { label: "Muyalogy.com", url: "https://muyalogy.com/" },
+      { label: "Jiret.com", url: "https://jiret.com/" },
+      { label: "Ongize.com", url: "https://ongize.com/" },
+    ],
     role: "Full-Stack Developer",
     period: "2023 — Jul 2026",
     location: "Addis Ababa",
@@ -75,7 +67,47 @@ export const experience: Experience[] = [
     stack: ["Next.js", "Drizzle ORM", "Puck", "Telegraf", "Supabase"],
   },
   {
+    company: "Panafrica Geoinformation Services Plc",
+    role: "Full-Stack Developer & Maintainer",
+    period: "Client project",
+    location: "",
+    summary: "Behager Properties — built and maintained entirely by me.",
+    highlights: [
+      "Built the entire Behager Properties website for Panafrica Geoinformation Services Plc.",
+      "Own all development and ongoing maintenance of the site.",
+    ],
+    stack: [],
+    links: [{ label: "Behager Properties", url: "https://www.behager.properties/" }],
+  },
+  {
+    company: "Perago Systems",
+    links: [{ label: "Procurement platform", url: "https://production.egp.gov.et/" }],
+    role: "Full-Stack Developer",
+    period: "2025 — Jul 2026",
+    location: "Addis Ababa",
+    summary:
+      "Enterprise procurement, done properly — from purchase request to audit log.",
+    highlights: [
+      "Develop and maintain an enterprise Procurement Management System covering purchase requests, approvals, vendor management, and inventory workflows.",
+      "Built scalable APIs with Hono and TypeScript, optimized for performance and reliability.",
+      "Implemented role-based access control, approval hierarchies, audit logs, and secure authentication.",
+      "Contributing to an AI-powered procurement platform currently in development.",
+    ],
+    stack: ["Hono", "TypeScript", "Next.js", "React", "PostgreSQL"],
+  },
+  {
+    company: "AR Solutions",
+    role: "Website Developer",
+    period: "Client project",
+    location: "",
+    summary: "Smash Burgers — a website I built for AR Solutions.",
+    highlights: ["Built the Smash Burgers website for AR Solutions."],
+    stack: [],
+    links: [{ label: "Smash Burgers", url: "https://smash-burgers-web.millagoss19.workers.dev/" }],
+  },
+  {
     company: "Family Insurance",
+    links: [{ label: "Family Insurance website", url: "https://public.senawidget.com/" }],
     role: "Front-End Developer",
     period: "2025 — Present",
     location: "Addis Ababa",
@@ -91,6 +123,7 @@ export const experience: Experience[] = [
   },
   {
     company: "Royd Tech Solutions",
+    links: [{ label: "Eposea", url: "https://eposea.com" }],
     role: "Software Developer",
     period: "2024",
     location: "Addis Ababa",
@@ -132,6 +165,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     index: "01",
+    title: "Behager Properties",
+    kind: "Real Estate · Panafrica Geoinformation Services Plc",
+    description: "The Behager Properties website for Panafrica Geoinformation Services Plc. Everything is built and maintained by me.",
+    impact: "Complete ownership, from development to ongoing maintenance.",
+    stack: [],
+    link: "https://www.behager.properties/",
+  },
+  {
+    index: "02",
+    title: "Smash Burgers",
+    kind: "Restaurant · AR Solutions",
+    description: "A website I built for AR Solutions, showcasing Smash Burgers.",
+    impact: "Built for AR Solutions.",
+    stack: [],
+    link: "https://smash-burgers-web.millagoss19.workers.dev/",
+  },
+  {
+    index: "03",
     title: "Jiret",
     kind: "SaaS · Learning & Talent",
     description:
@@ -141,7 +192,7 @@ export const projects: Project[] = [
     link: "https://jiret.com",
   },
   {
-    index: "02",
+    index: "04",
     title: "Bank Referral Bot",
     kind: "Telegram · Growth Engine",
     description:
@@ -151,27 +202,37 @@ export const projects: Project[] = [
     link: "https://github.com/Millagoss",
   },
   {
-    index: "03",
+    index: "05",
+    title: "@addislovebot",
+    kind: "Telegram Dating Bot · Personal Project",
+    description:
+      "A personal Telegram dating bot with multiple features that help people meet and connect.",
+    impact: "Independently built as a personal project.",
+    stack: [],
+    link: "https://t.me/addislovebot",
+  },
+  {
+    index: "06",
     title: "Procurement Platform",
     kind: "Enterprise · Internal Tooling",
     description:
       "End-to-end procurement management: purchase requests, approval hierarchies, vendor management, inventory workflows, audit logs, and RBAC — now evolving into an AI-powered platform.",
     impact: "One system replacing scattered, manual approval chains.",
     stack: ["Hono", "TypeScript", "Next.js", "RBAC"],
-    link: "https://peragosystems.com",
+    link: "https://production.egp.gov.et/",
   },
   {
-    index: "04",
+    index: "07",
     title: "Eposea",
-    kind: "Platform · Conference Management",
+    kind: "Conference Management · Royd Tech Solutions",
     description:
-      "Management portal for events, speakers, sponsors, and delegates — scheduling, registration tracking, and analytics dashboards for organizers.",
+      "At Royd Tech Solutions, I led the Eposea management portal for events, speakers, sponsors, and delegates — scheduling, registration tracking, and analytics dashboards for organizers.",
     impact: "Organizers run entire conferences from a single portal.",
     stack: ["Next.js", "Redux", "React Query", "Mantine"],
     link: "https://eposea.com",
   },
   {
-    index: "05",
+    index: "08",
     title: "Muyalogy",
     kind: "EdTech · Learning Platform",
     description:
@@ -181,14 +242,14 @@ export const projects: Project[] = [
     link: "https://muyalogy.com",
   },
   {
-    index: "06",
+    index: "09",
     title: "Family Insurance",
     kind: "FinTech · Insurance",
     description:
       "Public website and admin dashboard for a fully-fledged life and health insurance platform, built from normalized schemas up to Figma-faithful interfaces.",
     impact: "Policy management made legible for staff and customers.",
     stack: ["React", "REST API", "Figma", "Tailwind"],
-    link: "https://familyinsurance.et",
+    link: "https://public.senawidget.com/",
   },
 ];
 
