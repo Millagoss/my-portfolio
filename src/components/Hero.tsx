@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValue,
+  useMotionTemplate,
+  useTransform,
   useSpring,
   useReducedMotion,
   AnimatePresence,
@@ -19,16 +21,9 @@ export function Hero() {
   const my = useMotionValue(0.35);
   const sx = useSpring(mx, { stiffness: 50, damping: 20 });
   const sy = useSpring(my, { stiffness: 50, damping: 20 });
-  const [pos, setPos] = useState({ x: 50, y: 35 });
-
-  useEffect(() => {
-    const unX = sx.on("change", (v) => setPos((p) => ({ ...p, x: v * 100 })));
-    const unY = sy.on("change", (v) => setPos((p) => ({ ...p, y: v * 100 })));
-    return () => {
-      unX();
-      unY();
-    };
-  }, [sx, sy]);
+  const spotlightX = useTransform(sx, (value) => `${value * 100}%`);
+  const spotlightY = useTransform(sy, (value) => `${value * 100}%`);
+  const spotlight = useMotionTemplate`radial-gradient(700px circle at ${spotlightX} ${spotlightY}, rgba(214,199,161,0.085), transparent 65%)`;
 
   /* rotating role */
   const [roleIdx, setRoleIdx] = useState(0);
@@ -42,7 +37,7 @@ export function Hero() {
   }, [reduced]);
 
   return (
-    <section
+    <motion.section
       id="top"
       ref={ref}
       onMouseMove={(e) => {
@@ -52,9 +47,7 @@ export function Hero() {
         my.set((e.clientY - r.top) / r.height);
       }}
       className="relative flex min-h-svh flex-col justify-center overflow-hidden border-b border-line"
-      style={{
-        background: `radial-gradient(700px circle at ${pos.x}% ${pos.y}%, rgba(214,199,161,0.085), transparent 65%)`,
-      }}
+      style={{ background: spotlight }}
     >
       <div className="hero-background-grid" aria-hidden="true" />
       <div className="hero-background-glow" aria-hidden="true" />
@@ -162,6 +155,6 @@ export function Hero() {
           ))}
         </motion.dl>
       </div>
-    </section>
+    </motion.section>
   );
 }
