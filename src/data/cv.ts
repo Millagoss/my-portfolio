@@ -165,26 +165,28 @@ export interface Project {
 export const projects: Project[] = [
   {
     index: "01",
-    title: "Behager Properties",
-    kind: "Real Estate · Panafrica Geoinformation Services Plc",
-    description: "The Behager Properties website for Panafrica Geoinformation Services Plc. Everything is built and maintained by me.",
-    impact: "Complete ownership, from development to ongoing maintenance.",
+    title: "ULS",
+    kind: "Enterprise · AdilasTech",
+    description:
+      "Frontend development for ULS at AdilasTech, turning complex product workflows into responsive, accessible interfaces.",
+    impact: "Enterprise software built for real-world use.",
     stack: [],
-    link: "https://www.behager.properties/",
+    link: "https://uls.ai/",
   },
   {
     index: "02",
-    title: "Smash Burgers",
-    kind: "Restaurant · AR Solutions",
-    description: "A website I built for AR Solutions, showcasing Smash Burgers.",
-    impact: "Built for AR Solutions.",
-    stack: [],
-    link: "https://smash-burgers-web.millagoss19.workers.dev/",
+    title: "Muyalogy",
+    kind: "EdTech · Muyalogy",
+    description:
+      "Online learning platform with a scalable database and API core, paired with a Telegram moderation bot that filters content and manages community access automatically.",
+    impact: "Community moderation runs itself, 24/7.",
+    stack: ["Next.js", "Supabase", "Telegraf"],
+    link: "https://muyalogy.com",
   },
   {
     index: "03",
     title: "Jiret",
-    kind: "SaaS · Learning & Talent",
+    kind: "SaaS · Muyalogy",
     description:
       "Multi-tenant learning and talent-development platform. Designed a drag-and-drop page builder on Puck, extending it well past standard capabilities, plus AI-assisted learning features.",
     impact: "Non-developers ship custom pages without touching code.",
@@ -193,28 +195,17 @@ export const projects: Project[] = [
   },
   {
     index: "04",
-    title: "Bank Referral Bot",
-    kind: "Telegram · Growth Engine",
-    description:
-      "Referral engine with unique invite codes, automated weekly winner announcements, and anti-fraud detection, deployed across multiple banks' channels.",
-    impact: "39k → 60k members in one month; 40k new registrations.",
-    stack: ["Telegraf", "MySQL", "JavaScript"],
-    link: "https://github.com/Millagoss",
+    title: "Behager Properties",
+    kind: "Real Estate · Panafrica Geoinformation Services Plc",
+    description: "The Behager Properties website for Panafrica Geoinformation Services Plc. Everything is built and maintained by me.",
+    impact: "Complete ownership, from development to ongoing maintenance.",
+    stack: [],
+    link: "https://www.behager.properties/",
   },
   {
     index: "05",
-    title: "@addislovebot",
-    kind: "Telegram Dating Bot · Personal Project",
-    description:
-      "A personal Telegram dating bot with multiple features that help people meet and connect.",
-    impact: "Independently built as a personal project.",
-    stack: [],
-    link: "https://t.me/addislovebot",
-  },
-  {
-    index: "06",
     title: "Procurement Platform",
-    kind: "Enterprise · Internal Tooling",
+    kind: "Enterprise · Perago Systems",
     description:
       "End-to-end procurement management: purchase requests, approval hierarchies, vendor management, inventory workflows, audit logs, and RBAC — now evolving into an AI-powered platform.",
     impact: "One system replacing scattered, manual approval chains.",
@@ -222,7 +213,26 @@ export const projects: Project[] = [
     link: "https://production.egp.gov.et/",
   },
   {
+    index: "06",
+    title: "Smash Burgers",
+    kind: "Restaurant · AR Solutions",
+    description: "A website I built for AR Solutions, showcasing Smash Burgers.",
+    impact: "Built for AR Solutions.",
+    stack: [],
+    link: "https://smash-burgers-web.millagoss19.workers.dev/",
+  },
+  {
     index: "07",
+    title: "Family Insurance",
+    kind: "FinTech · Family Insurance",
+    description:
+      "Public website and admin dashboard for a fully-fledged life and health insurance platform, built from normalized schemas up to Figma-faithful interfaces.",
+    impact: "Policy management made legible for staff and customers.",
+    stack: ["React", "REST API", "Figma", "Tailwind"],
+    link: "https://public.senawidget.com/",
+  },
+  {
+    index: "08",
     title: "Eposea",
     kind: "Conference Management · Royd Tech Solutions",
     description:
@@ -232,24 +242,24 @@ export const projects: Project[] = [
     link: "https://eposea.com",
   },
   {
-    index: "08",
-    title: "Muyalogy",
-    kind: "EdTech · Learning Platform",
+    index: "09",
+    title: "Bank Referral Bot",
+    kind: "Telegram · Blih Marketing",
     description:
-      "Online learning platform with a scalable database and API core, paired with a Telegram moderation bot that filters content and manages community access automatically.",
-    impact: "Community moderation runs itself, 24/7.",
-    stack: ["Next.js", "Supabase", "Telegraf"],
-    link: "https://muyalogy.com",
+      "Referral engine with unique invite codes, automated weekly winner announcements, and anti-fraud detection, deployed across multiple banks' channels.",
+    impact: "39k → 60k members in one month; 40k new registrations.",
+    stack: ["Telegraf", "MySQL", "JavaScript"],
+    link: "https://github.com/Millagoss",
   },
   {
-    index: "09",
-    title: "Family Insurance",
-    kind: "FinTech · Insurance",
+    index: "10",
+    title: "@addislovebot",
+    kind: "Telegram Dating Bot · Personal Project",
     description:
-      "Public website and admin dashboard for a fully-fledged life and health insurance platform, built from normalized schemas up to Figma-faithful interfaces.",
-    impact: "Policy management made legible for staff and customers.",
-    stack: ["React", "REST API", "Figma", "Tailwind"],
-    link: "https://public.senawidget.com/",
+      "A personal Telegram dating bot with multiple features that help people meet and connect.",
+    impact: "Independently built as a personal project.",
+    stack: [],
+    link: "https://t.me/addislovebot",
   },
 ];
 
