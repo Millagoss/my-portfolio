@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { ArrowUpRight, Minus, Plus } from "lucide-react";
 import { experience } from "../data/cv";
 import { SectionHeading, Reveal } from "./Reveal";
 
@@ -34,8 +34,8 @@ export function Experience() {
                       <h3 className="mt-2 font-serif text-2xl leading-tight text-paper group-hover:text-gold md:text-3xl">{job.company}</h3>
                       <span className="mt-2 block text-xs leading-relaxed text-mute">{job.role}</span>
                     </div>
-                    <span className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border ${isOpen ? "border-brass/40 bg-brass/10 text-gold" : "border-line text-mute"}`}>
-                      <Plus size={16} aria-hidden className={`transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`} />
+                    <span className={`mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors duration-200 ${isOpen ? "border-gold bg-gold text-ink" : "border-brass/60 bg-gold/10 text-paper group-hover:border-gold group-hover:bg-gold/20 group-focus-visible:border-gold group-focus-visible:bg-gold/20"}`}>
+                      {isOpen ? <Minus size={22} strokeWidth={2.5} aria-hidden /> : <Plus size={22} strokeWidth={2.5} aria-hidden />}
                     </span>
                   </button>
                   {job.links && (
