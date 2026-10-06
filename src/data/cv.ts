@@ -233,6 +233,16 @@ export const projects: Project[] = [
   },
   {
     index: "08",
+    title: "@addislovebot",
+    kind: "Telegram Dating Bot · Personal Project",
+    description:
+      "A personal Telegram dating bot with multiple features that help people meet and connect.",
+    impact: "Independently built as a personal project.",
+    stack: [],
+    link: "https://t.me/addislovebot",
+  },
+  {
+    index: "09",
     title: "Eposea",
     kind: "Conference Management · Royd Tech Solutions",
     description:
@@ -242,7 +252,7 @@ export const projects: Project[] = [
     link: "https://eposea.com",
   },
   {
-    index: "09",
+    index: "10",
     title: "Bank Referral Bot",
     kind: "Telegram · Blih Marketing",
     description:
@@ -250,16 +260,6 @@ export const projects: Project[] = [
     impact: "39k → 60k members in one month; 40k new registrations.",
     stack: ["Telegraf", "MySQL", "JavaScript"],
     link: "https://github.com/Millagoss",
-  },
-  {
-    index: "10",
-    title: "@addislovebot",
-    kind: "Telegram Dating Bot · Personal Project",
-    description:
-      "A personal Telegram dating bot with multiple features that help people meet and connect.",
-    impact: "Independently built as a personal project.",
-    stack: [],
-    link: "https://t.me/addislovebot",
   },
 ];
 
