@@ -11,7 +11,7 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "3+", label: "years shipping production software" },
+  { value: "4+", label: "years shipping production software" },
   { value: "8", label: "companies & clients, from startups to enterprise" },
   { value: "60k", label: "members grown on one bot campaign" },
   { value: "8+", label: "platforms built or led end-to-end" },
